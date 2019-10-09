@@ -16,12 +16,12 @@ pipeline {
                 input 'Deploy to Production?'
                 milestone(1)
                 kubernetesDeploy(
-                    kubeconfigId: 'kubeconfig',
+                    kubeconfigId: 'KUBECONFIG',
                     configs: 'norris-fact.yml',
                     enableConfigSubstitution: true
                 )
                 kubernetesDeploy(
-                    kubeconfigId: 'kubeconfig',
+                    kubeconfigId: 'KUBECONFIG',
                     configs: 'norris-fact.yml',
                     enableConfigSubstitution: true
                 )
