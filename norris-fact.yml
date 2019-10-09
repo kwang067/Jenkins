@@ -2,6 +2,7 @@
  kind: Deployment
  metadata:
    name: norris-fact
+   namespace: web
  spec:
    replicas: 2
    selector:
