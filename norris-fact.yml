@@ -1,0 +1,19 @@
+ apiVersion: apps/v1
+ kind: Deployment
+ metadata:
+   name: norris-fact
+ spec:
+   replicas: 2
+   selector:
+     matchLabels:
+       app: norris-fact
+   template:
+     metadata:
+       name: norris-fact
+       labels:
+         app: norris-fact
+     spec:
+       containers:
+       #- image: contactkevnation67/hello-world:firsttry
+       - image: contactkevnation67/chucknorris:latest
+         name: norris-fact
